@@ -1,0 +1,14 @@
+# Use the official Rasa image as base
+FROM rasa/rasa:latest
+
+# Copy actions directory to working directory
+COPY ./actions /app/actions
+
+# Install dependencies
+RUN pip install -r /app/requirements.txt
+
+# Expose the Rasa server port
+EXPOSE 5005
+
+# Start the Rasa server
+CMD ["run", "-m", "models", "--enable-api", "--cors", "*", "--debug"]

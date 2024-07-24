@@ -1,0 +1,28 @@
+version: "2.0"
+stories:
+- story: greet and ask about entry requirements
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_entry_requirements
+  - action: utter_entry_requirements
+
+- story: ask about financial requirements
+  steps:
+  - intent: ask_financial_requirements
+  - action: utter_financial_requirements
+
+- story: ask about bank statements
+  steps:
+  - intent: ask_bank_statements
+  - action: utter_bank_statements
+
+- story: ask about CAS
+  steps:
+  - intent: ask_cas
+  - action: utter_cas
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

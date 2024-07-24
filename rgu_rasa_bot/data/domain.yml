@@ -1,0 +1,26 @@
+version: "2.0"
+intents:
+  - greet
+  - goodbye
+  - ask_entry_requirements
+  - ask_financial_requirements
+  - ask_bank_statements
+  - ask_cas
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_entry_requirements:
+    - text: "The entry requirements include academic entry requirements, English entry requirements, a valid passport for six months from the course start, and a statement of purpose. Some courses may also require an ATAS certificate."
+  utter_financial_requirements:
+    - text: "You need to prove you can afford the first year of study, including tuition fees minus deposit and scholarships, plus living costs (£9,207 for Scotland). The IHS fee is £470 per year."
+  utter_bank_statements:
+    - text: "Bank statements must adhere to the 28-day rule and contain details about the account holder, account number, currency, and dates. Digital statements are acceptable if dated within 31 days of the visa application."
+  utter_cas:
+    - text: "Your CAS consists of a 14-digit number and application details. Notify RGU of any mistakes. Apply for the visa only after receiving both CAS and an unconditional offer. Collect your biometric permit within ten days of arrival in the UK."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

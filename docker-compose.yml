@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  rasa:
+    build:
+      context: ./rasa
+    ports:
+      - "5005:5005"  # Expose Rasa server port
+
+  rasa-actions:
+    build:
+      context: ./rasa
+      dockerfile: Dockerfile.actions
+    ports:
+      - "5055:5055"  # Expose Rasa actions server port
+
+  django:
+    build:
+      context: .
+    ports:
+      - "8000:8000"  # Expose Django server port
+    depends_on:
+      - rasa  # Ensure Rasa service is started first
+      - rasa-actions  # Ensure Rasa actions server is started first
+

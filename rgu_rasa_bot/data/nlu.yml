@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+
+- intent: ask_entry_requirements
+  examples: |
+    - What are the entry requirements?
+    - Tell me about the entry requirements
+    - What do I need to apply?
+    - Yes
+
+- intent: ask_financial_requirements
+  examples: |
+    - What are the financial requirements?
+    - How much money do I need to show?
+    - Tell me about the financial requirements
+
+- intent: ask_bank_statements
+  examples: |
+    - What are the bank statement requirements?
+    - Tell me about the 28-day rule
+    - How should my bank statements be?
+
+- intent: ask_cas
+  examples: |
+    - What is a CAS?
+    - Tell me about the CAS
+    - How do I get my CAS?
